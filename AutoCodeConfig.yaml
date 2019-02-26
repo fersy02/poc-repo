@@ -118,54 +118,12 @@ generators:
   inactive: false
   matches:
   - name: "ROLE_ADMIN,ROLE_PM,ROLE_USER"
-    value: "None"
+    value: "AutoMap"
     methods: null
     denyRoles: null
     allowRoles: null
     pathPatterns: null
-    resourceSamples: "POST:/api/v1/branches:Allowed[ROLE_ADMIN]\nGET:/api/v1/primary-transaction/{id}:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      GET:/api/v1/orgs/login-status:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\nGET:/api/v1/orgs/{branchId}/branch-user/{orgUserId}:Allowed[ROLE_ADMIN]\n\
-      GET:/api/v1/orgs/{id}/users:Allowed[ROLE_ADMIN]\nGET:/api/v1/savings-transaction/{id}:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\n\
-      DELETE:/api/v1/primary-transaction/{id}:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      GET:/api/v1/primary-account/primary-account:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\n\
-      POST:/api/v1/issues:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\nGET:/api/v1/bank-account/{id}:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\n\
-      GET:/api/v1/transfers/{id}:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\nPOST:/api/v1/orgs:Allowed[ROLE_ADMIN]\n\
-      GET:/api/v1/issues/product/{projectId}:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      GET:/api/v1/savings-transaction:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\nPUT:/api/v1/issues:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\n\
-      DELETE:/api/v1/bank-account/{id}:Allowed[ROLE_ADMIN]\nGET:/api/v1/products/{id}:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\n\
-      GET:/api/v1/users/status:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\nDELETE:/api/v1/orgs/{id}:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/primary-account/withdraw-amount:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      POST:/api/v1/products:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\nDELETE:/api/v1/products/{id}:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\n\
-      POST:/api/v1/savings-transaction:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\nGET:/api/v1/primary-transaction:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\n\
-      POST:/api/v1/users/team-sign-up:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\nGET:/api/v1/issues/{id}:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      POST:/api/v1/users/enterprise-sign-up:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      POST:/api/v1/recepient:Allowed[ROLE_ADMIN]\nPUT:/api/v1/bank-account/deposit-amount:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      DELETE:/api/v1/issues/product/{projectId}/issue/{id}:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\n\
-      GET:/api/v1/orgs/search:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\nPOST:/api/v1/orgs/{branchId}/users/add-member:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/savings-transaction:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\nDELETE:/api/v1/savings-account/savings-account/{id}:Allowed[ROLE_ADMIN]\n\
-      GET:/api/v1/branches:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\nGET:/api/v1/orgs/find-by-name/{name}:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\n\
-      GET:/api/v1/orgs/allorgs:Allowed[ROLE_ADMIN]\nDELETE:/api/v1/transfers/{id}:Allowed[ROLE_ADMIN]\n\
-      POST:/api/v1/savings-account/savings-account:Allowed[ROLE_ADMIN]\nPOST:/api/v1/issues/ui:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      GET:/api/v1/savings-account/savings-account/{id}:Allowed[ROLE_USER,ROLE_PM,ROLE_ADMIN]\n\
-      POST:/api/v1/primary-transaction:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\nDELETE:/api/v1/savings-transaction/{id}:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      PUT:/api/v1/issues/ui:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\nPOST:/api/v1/transfers:Allowed[ROLE_ADMIN]\n\
-      GET:/api/v1/products:Allowed[ROLE_ADMIN,ROLE_PM,ROLE_USER]\nGET:/api/v1/primary-account/primary-account/{id}:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\n\
-      POST:/api/v1/primary-account/primary-account:Allowed[ROLE_ADMIN]\nGET:/api/v1/savings-account/savings-account:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\n\
-      PUT:/api/v1/bank-account/withdraw-amount:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      POST:/api/v1/orgs/{branchId}/users/{userId}/reset-password:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/products:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\nDELETE:/api/v1/primary-account/primary-account/{id}:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/orgs/{branchId}/users/{userId}:Allowed[ROLE_ADMIN]\nPUT:/api/v1/primary-account/deposit-amount:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\n\
-      GET:/api/v1/transfers:Allowed[ROLE_PM,ROLE_ADMIN,ROLE_USER]\nGET:/api/v1/branches/{id}:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\n\
-      POST:/api/v1/bank-account:Allowed[ROLE_ADMIN]\nPUT:/api/v1/primary-transaction:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\n\
-      GET:/api/v1/orgs:Allowed[ROLE_ADMIN]\nGET:/api/v1/orgs/by-user:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      PUT:/api/v1/savings-account/savings-account:Allowed[ROLE_ADMIN]\nGET:/api/v1/bank-account:Allowed[ROLE_PM,ROLE_USER,ROLE_ADMIN]\n\
-      GET:/api/v1/recepient/{id}:Allowed[ROLE_ADMIN,ROLE_USER,ROLE_PM]\nPUT:/api/v1/orgs/{id}:Allowed[ROLE_ADMIN]\n\
-      DELETE:/api/v1/branches/{id}:Allowed[ROLE_ADMIN]\nDELETE:/api/v1/recepient/{id}:Allowed[ROLE_ADMIN]\n\
-      GET:/api/v1/recepient:Allowed[ROLE_ADMIN]\nGET:/api/v1/orgs/{id}:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/primary-account/primary-account:Allowed[ROLE_ADMIN]\nPUT:/api/v1/recepient:Allowed[ROLE_ADMIN]\n\
-      POST:/api/v1/users/personal-sign-up:Allowed[ROLE_USER,ROLE_ADMIN,ROLE_PM]\n\
-      PUT:/api/v1/bank-account:Allowed[ROLE_ADMIN]\nPUT:/api/v1/branches/update:Allowed[ROLE_ADMIN]\n\
-      PUT:/api/v1/transfers:Allowed[ROLE_ADMIN]\n"
+    resourceSamples: ""
     queryParams: null
     bodyProperties: null
   authors: ""
