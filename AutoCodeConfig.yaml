@@ -179,7 +179,7 @@ generators:
   - "Data_Access_Control"
   severity: "Major"
   database: null
-  inactive: true
+  inactive: false
   matches:
   - name: null
     value: null
